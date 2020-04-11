@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script>
+                        function getLinkJSONpt2() {
+                        var a,b,c;
+                        a = document.getElementById("inputa").value;
+                        b = document.getElementById("inputb").value;
+                        c = document.getElementById("inputc").value;
+                        window.open(window.location.protocol +"/Examplerestfulapi/webresources/test/getdata/A="+a+"&B="+b+"&C="+c+"/data.json");
+                        }
+                        function getLinkXMLpt2() {
+                        var a,b,c;
+                        a = document.getElementById("inputa").value;
+                        b = document.getElementById("inputb").value;
+                        c = document.getElementById("inputc").value;
+                        window.open(window.location.protocol +"/Examplerestfulapi/webresources/test/getdata/A="+a+"&B="+b+"&C="+c+"/data.xml");
+                        }
+                        function getLinkJSONyear() {
+                        var a;
+                        a = document.getElementById("inputyear").value;
+                        window.open(window.location.protocol +"/Examplerestfulapi/webresources/test/getdata/year="+a+"/data.json");
+                        }
+                        function getLinkXMLyear() {
+                        var a;
+                        a = document.getElementById("inputyear").value;
+                        window.open(window.location.protocol +"/Examplerestfulapi/webresources/test/getdata/year="+a+"/data.xml");
+                        }
+                        function getData()
+                        {
+                            document.getElementById("txt_apijsonpt2").innerHTML = window.location.protocol +"/Examplerestfulapi/webresources/test/getdata/A={a}&B={b}&C={c}/data.json";
+                            document.getElementById("txt_apixmlpt2").innerHTML = window.location.protocol +"/Examplerestfulapi/webresources/test/getdata/A={a}&B={b}&C={c}/data.xml";
+                            document.getElementById("txt_apijsonyear").innerHTML = window.location.protocol +"/Examplerestfulapi/webresources/test/getdata/year={a}/data.json";
+                            document.getElementById("txt_apixmlyear").innerHTML = window.location.protocol +"/Examplerestfulapi/webresources/test/getdata/year={a}/data.xml";
+                        }
+</script>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Example Rest Api</title>
+</head>
+<body>
+        <h1>Giai phuong trinh bac 2</h1>
+        <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/23e70cfa003f402d108ec04d97983fb62f69536e"
+        class="mwe-math-fallback-image-inline" aria-hidden="true"
+        style="vertical-align: -0.505ex; width:16.89ex;
+        height:2.843ex;" alt="ax^{2}+bx+c=0">
+        <form>
+        <label for="fname">a</label><br>
+        <input type="number" id="inputa" name="fname"><br>
+        <label for="lname">b</label><br>
+        <input type="number" id="inputb" name="lname"><br>
+        <label for="lname">c</label><br>
+        <input type="number" id="inputc" name="lname"><br>
+        <input type ="button" name="OKE" value="GETJSON" onclick="getLinkJSONpt2()">
+        <input type ="button" name="OKE" value="GETXML" onclick="getLinkXMLpt2()">
+        </form>
+                <h3>Api json pt2: </h3><h4 id="txt_apijsonpt2"></h4>
+                <h3>Api xml pt2: </h3><h4 id="txt_apixmlpt2"></h4>
+        <h1>Kiem tra nam nhuan</h1>
+                <form>
+                    <label for="lname">Nhap nam</label><br>
+                    <input type="number" id="inputyear" name="lname"><br>
+                    <input type ="button" name="OKE" value="GETJSON" onclick="getLinkJSONyear()">
+                    <input type ="button" name="OKE" value="GETXML" onclick="getLinkXMLyear()">
+                </form>
+                <h3>Api json pt2: </h3><h4 id="txt_apijsonyear"></h4>
+                <h3>Api xml pt2: </h3><h4 id="txt_apixmlyear"></h4>
+            <script>getData();</script>
+    </body>
+</html>
